@@ -57,7 +57,7 @@ const fetchSuggestion = async ({value}) =>{
 
     }  
     catch (error) {
-        console.log("error fetch")
+        console.log("error fetch " + error)
     }
 }
 else {
