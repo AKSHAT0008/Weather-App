@@ -1,0 +1,150 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.weather {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+}
+
+.searchContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.searchBar {
+  width: 80%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.searchBar:focus {
+  border-color: #007BFF;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+.searchIcon {
+  width: 30px;
+  margin-left: -35px;
+  cursor: pointer;
+}
+
+.temp-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.Tempicon {
+  width: 80px;
+  height: 80px;
+  margin-right: 10px;
+}
+
+.nameNtemp {
+  text-align: left;
+}
+
+.cityName {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.temp {
+  font-size: 30px;
+  color: #007BFF;
+  font-weight: bold;
+}
+
+.description {
+  font-size: 14px;
+  color: #777;
+}
+
+.weatherData {
+  display: flex;
+  justify-content: space-around;
+}
+
+.humidty-container, .wind-container {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+
+.humidity-data, .windSpeed {
+  font-size: 16px;
+  color: #555;
+}
+
+/* Hover Effects */
+.searchIcon:hover {
+  opacity: 0.7;
+}
+
+.searchBar:hover {
+  border-color: #007BFF;
+}
+
+.weather {
+  transition: all 0.3s ease;
+}
+
+.weather:hover {
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Design */
+@media (max-width: 400px) {
+  .weather {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .searchBar {
+    width: 70%;
+  }
+
+  .Tempicon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .cityName {
+    font-size: 20px;
+  }
+
+  .temp {
+    font-size: 26px;
+  }
+
+  .description {
+    font-size: 12px;
+  }
+
+  .humidity-data, .windSpeed {
+    font-size: 14px;
+  }
+}
