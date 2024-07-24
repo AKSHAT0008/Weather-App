@@ -45,11 +45,8 @@ const search = async (city) =>{
     }
 }
 const fetchSuggestion = async ({value}) =>{
-    if(value){
-    if (value.trim().length === 0) {
-        setSuggestion([])
-        return
-     }}
+    
+    if (value && value.trim().length > 0) {
     try {
         const url =`http://api.openweathermap.org/geo/1.0/direct?q=${value}&limit=6&appid=9d93359fc5f88b14074e7d58adeebd22`
         const res = await axios.get(url);
@@ -58,10 +55,14 @@ const fetchSuggestion = async ({value}) =>{
         setSuggestion(data.map((item)=>({name:item.name})));
         console.log(suggestion);
 
-    } catch (error) {
+    }  
+    catch (error) {
         console.log("error fetch")
     }
 }
+else {
+    setSuggestion([]);
+  }}
     useEffect(()=>{
         search("New York")
         fetchSuggestion("london")
