@@ -48,7 +48,7 @@ const fetchSuggestion = async ({value}) =>{
     
     if (value && value.trim().length > 0) {
     try {
-        const url =`http://api.openweathermap.org/geo/1.0/direct?q=${value}&limit=6&appid=9d93359fc5f88b14074e7d58adeebd22`
+        const url =`https://api.openweathermap.org/geo/1.0/direct?q=${value}&limit=6&appid=9d93359fc5f88b14074e7d58adeebd22`
         const res = await axios.get(url);
         const data = res.data;
         console.log(data);
