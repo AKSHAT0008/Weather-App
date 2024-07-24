@@ -69,9 +69,13 @@ else {
     },[])
  const renderSuggestion=(suggestion)=>(
         <>
-        <div className="suggestion-container">
+        <div className="suggestion-container" onClick={()=>{
+            // setCity(suggestion.name) 
+            search(suggestion.name) 
+            setTimeout(() => setCity(""), 0)   
+            }}>
         <img className='searchIcon-suggestion' src={searchI} alt="" />
-        <div className='name-suggestion' >  {suggestion.name}</div>
+        <div className='name-suggestion'  >  {suggestion.name}</div>
         </div>
         </>
     )
@@ -99,6 +103,7 @@ else {
             onSuggestionsClearRequested={()=>setSuggestion([])}
             getSuggestionValue={(suggestion)=>suggestion.name}
             renderSuggestion={renderSuggestion}
+            
             inputProps={{
                 placeholder:'Search city...',
                 value:city,
